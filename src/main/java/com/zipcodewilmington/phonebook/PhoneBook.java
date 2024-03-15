@@ -1,10 +1,8 @@
 package com.zipcodewilmington.phonebook;
 
-import java.util.List;
-import java.util.ArrayList;
-//import java.util.HashMap;
-import java.util.Iterator;
 import java.util.LinkedHashMap;
+import java.util.List;
+//import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -16,12 +14,16 @@ public class PhoneBook {
     private final Map<String, List<String>> phonebook;
 
     public PhoneBook(Map<String, List<String>> map) {
-        this.phonebook = null;
+        this.phonebook = new LinkedHashMap<>();
     }
-
     public PhoneBook() {
         this(null);
     }
+
+
+
+
+
 
     public void add(String name, String phoneNumber) {
     }
@@ -32,7 +34,7 @@ public class PhoneBook {
     public void remove(String name) {
     }
 
-    public Boolean hasEntry(String name) {
+    public Boolean hasEntry(String name, String phoneNumber) {
         return null;
     }
 
