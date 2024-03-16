@@ -1,5 +1,6 @@
 package com.zipcodewilmington.phonebook;
 
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 //import java.util.HashMap;
@@ -19,41 +20,34 @@ public class PhoneBook {
     public PhoneBook() {
         this(null);
     }
-
-
-
-
-
-
     public void add(String name, String phoneNumber) {
-        phonebook.put()
-
-
+        phonebook.put(name,List.of(phoneNumber));
     }
 
     public void addAll(String name, String... phoneNumbers) {
+        phonebook.put(name,List.of(phoneNumbers));
     }
 
     public void remove(String name) {
+        phonebook.remove(name);
     }
 
     public Boolean hasEntry(String name, String phoneNumber) {
-        return null;
+        return phonebook.containsKey(name) && phonebook.containsValue(List.of(phoneNumber));
     }
 
     public List<String> lookup(String name) {
-        return null;
+        return phonebook.get(name);
     }
 
-    public String reverseLookup(String phoneNumber)  {
+    public String reverseLookup(String phoneNumber) {
         return null;
     }
-
     public List<String> getAllContactNames() {
-        return null;
+        return new ArrayList<>(phonebook.keySet());
     }
 
     public Map<String, List<String>> getMap() {
-        return null;
+        return phonebook;
     }
 }
